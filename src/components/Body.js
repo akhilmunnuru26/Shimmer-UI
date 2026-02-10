@@ -26,7 +26,7 @@ const Body = () => {
     }
 
   return (
-    <div className='flex flex-row flex-wrap justify-between align-middle'>
+    <div className='flex flex-row flex-wrap justify-between align-middle px-4'>
         {!memes ? <Shimmer/> : memes.map((meme,i) => <MemeCard key={i} data={meme}/>)}
     </div>
   )
