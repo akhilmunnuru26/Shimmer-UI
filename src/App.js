@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Teams from "./components/Teams";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Accordion from "./components/Accordion";
 
 // Always Create a Wrapper component/ Higher order component like Protected Route Component
 const App = () => {
@@ -27,6 +28,9 @@ const App = () => {
           </a>
           <a href="/About" className="mx-2">
             About
+          </a>
+          <a href="/accordion">
+            Accordion
           </a>
           <a className="mx-2" href="/teams">
             Teams
@@ -58,6 +62,7 @@ const App = () => {
           <Route element={<ProtectedRoute />}>
             <Route path="/About" element={<About lang={lang} />} />
             <Route path="/Teams" element={<Teams />} />
+            <Route path="/Accordion" element={<Accordion />} />
           </Route>
 
           <Route path="/login" element={<Login />} />
